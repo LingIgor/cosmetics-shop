@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.js": "/cosmetics-shop/static/js/main.29de497c.js",
-    "static/media/ban.jpg": "/cosmetics-shop/static/media/ban.e05f8a7323d9466fe59d.jpg",
-    "static/media/product.jpg": "/cosmetics-shop/static/media/product.45f4b2ee42433dbb5cc7.jpg",
+    "main.js": "/cosmetics-shop/static/js/main.275903a1.js",
     "index.html": "/cosmetics-shop/index.html",
-    "main.29de497c.js.map": "/cosmetics-shop/static/js/main.29de497c.js.map"
+    "main.275903a1.js.map": "/cosmetics-shop/static/js/main.275903a1.js.map"
   },
   "entrypoints": [
-    "static/js/main.29de497c.js"
+    "static/js/main.275903a1.js"
   ]
 }
