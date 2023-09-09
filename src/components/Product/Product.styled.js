@@ -1,12 +1,6 @@
-import styled from "@emotion/styled";
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+import styled from '@emotion/styled';
+import { Button, CardContent, CardMedia, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const ProductCardLink = styled(Link)`
   width: 400px;
@@ -18,7 +12,7 @@ export const ProductCardLink = styled(Link)`
   border: 1px solid #e0e0e0;
   padding: 20px;
   box-shadow: 2px 1px 20px 1px pink;
-  /* box-shadow: 8px 1px 50px 1px ${(props) => props.randomColor || "white"}; */
+  /* box-shadow: 8px 1px 50px 1px ${props => props.randomColor || 'white'}; */
   transition: transform 0.3s;
 
   &:hover {
