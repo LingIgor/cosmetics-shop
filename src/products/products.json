@@ -1,0 +1,38 @@
+
+
+      [  {
+      "id": 1,
+      "title": "Bourjois Mon Bourjois La Fantastique",
+      "category": "Парфумна вода",
+      "price": 500,
+      "rating": "*****"
+    },
+    {
+      "id": 2,
+      "title": "MAREVE Wild Desire",
+      "category": "набір корольвих",
+      "price": 300,
+      "rating": "*****"
+    },
+    {
+      "id": 3,
+      "title": "MAREVE Secret Sense",
+      "category": "шось там ще не знаю що ",
+      "price": 278,
+      "rating": "*****"
+    },
+    {
+      "id": 4,
+      "title": "MAREVE Secret Sense",
+      "category": "класний розділ",
+      "price": 430,
+      "rating": "*****"
+    },
+    {
+      "id": 5,
+      "title": "MAREVE Secret Sense",
+      "category": "останній розділ",
+      "price": 890,
+      "rating": "*****"
+    }
+      ]
