@@ -1,31 +1,29 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import React from 'react';
+import { Formik, Form, Field } from 'formik';
 import {
   TextField,
   Button,
   Typography,
   Container,
   CssBaseline,
-  
   Grid,
   Paper,
   Backdrop,
-} from "@mui/material";
-import {Link} from "react-router-dom"
-import { LockOutlined as LockOutlinedIcon } from "@mui/icons-material";
-
+} from '@mui/material';
+import { Link } from 'react-router-dom';
+import { LockOutlined as LockOutlinedIcon } from '@mui/icons-material';
 
 const LoginForm = ({ closeForm }) => {
   const initialValues = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   };
 
-  const handleSubmit = (values) => {
-    console.log("Отправка данных:", values);
+  const handleSubmit = values => {
+    console.log('Отправка данных:', values);
   };
 
-  const closeFormBackdrop = (e) => {
+  const closeFormBackdrop = e => {
     if (e.target === e.currentTarget) {
       closeForm();
     }
@@ -34,29 +32,28 @@ const LoginForm = ({ closeForm }) => {
   return (
     <Backdrop
       open={true}
-      style={{ zIndex: "1", background: "rgba(255, 255, 255, 0.4)" }}
+      style={{ zIndex: '1', background: 'rgba(255, 255, 255, 0.4)' }}
       onClick={closeFormBackdrop}
     >
-      <Container component="main" style={{ width:"500px"}}>
-
+      <Container component="main" style={{ width: '500px' }}>
         <CssBaseline />
         <Paper
           elevation={3}
           sx={{
             padding: 4,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            position:"relative",
-            border: "3px solid pink"
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            position: 'relative',
+            border: '3px solid pink',
           }}
         >
-          <LockOutlinedIcon sx={{ fontSize: 48, color: "pink" }} />
+          <LockOutlinedIcon sx={{ fontSize: 48, color: 'pink' }} />
           <Typography variant="h5" component="h2" sx={{ mt: 2 }}>
             Вхід
           </Typography>
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-            <Form sx={{ width: "100%", mt: 3 }}>
+            <Form sx={{ width: '100%', mt: 3 }}>
               <Field
                 as={TextField}
                 name="email"
@@ -83,10 +80,10 @@ const LoginForm = ({ closeForm }) => {
                 onClick={closeForm}
                 sx={{ mt: 3, mb: 2 }}
                 style={{
-                  height: "50px",
-                  borderRadius: "10px",
-                  background: "pink",
-                  color: "red",
+                  height: '50px',
+                  borderRadius: '10px',
+                  background: 'pink',
+                  color: 'red',
                 }}
               >
                 Увійти
@@ -94,11 +91,10 @@ const LoginForm = ({ closeForm }) => {
               <Grid container>
                 <Grid item xs>
                   <Link
-              
-                      style={{
-                      color: "black",
-                      textDecoration: "none",
-                      fontSize: "16px",
+                    style={{
+                      color: 'black',
+                      textDecoration: 'none',
+                      fontSize: '16px',
                     }}
                   >
                     Забыли пароль?
@@ -106,13 +102,13 @@ const LoginForm = ({ closeForm }) => {
                 </Grid>
                 <Grid item>
                   <Link
-                      to={"/register"}   
-                      onClick={closeForm}                 
+                    to={'/register'}
+                    onClick={closeForm}
                     variant="body2"
                     style={{
-                      color: "black",
-                      textDecoration: "none",
-                      fontSize: "16px",
+                      color: 'black',
+                      textDecoration: 'none',
+                      fontSize: '16px',
                     }}
                   >
                     Зарегистрироваться
@@ -122,7 +118,6 @@ const LoginForm = ({ closeForm }) => {
             </Form>
           </Formik>
         </Paper>
-        
       </Container>
     </Backdrop>
   );
