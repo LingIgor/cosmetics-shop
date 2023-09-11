@@ -5,6 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import img from '../../images/product.jpg';
 import cardsData from '../../products/products.json';
+
 import {
   Container,
   PaperCart,
@@ -20,7 +21,7 @@ import {
 } from './Cart.styled';
 import { Backdrop } from '@mui/material';
 
-export const Cart = () => {
+export const Cart = ({closeCart}) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => {
@@ -33,11 +34,18 @@ export const Cart = () => {
     }
   };
 
+
+  const closeCartBackdrop = e => {
+    if (e.target === e.currentTarget) {
+      closeCart();
+    }
+  };
+
   return (
     <Backdrop
       open={true}
       style={{ zIndex: '1', background: 'rgba(0, 0, 0, 0.6)' }}
-      // onClick={closeFormBackdrop}
+      onClick={closeCartBackdrop}
     >
     <Container>
       <PaperCart elevation={3}>
@@ -46,8 +54,8 @@ export const Cart = () => {
         </Title>
         <ContainerMain>
           <ContainerItems>
-            {cardsData.map(({ title, price, category }) => (
-              <ContainerItem>
+            {cardsData.map(({ title, price, category, id }) => (
+              <ContainerItem key={id}>
                 <ImgItem src={img} alt="Фотография" />
                 <TextBox>
                   <Typography variant="subtitle1">{title}</Typography>

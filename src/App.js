@@ -5,11 +5,24 @@ import { Layout } from './components/Layout/Layout';
 import { Home } from './components/Home/Home';
 import Register from './components/Signup/Signup';
 import { OneProduct } from './components/OneProduct/OneProduct';
+import { Cart } from 'components/Cart/Cart';
 
 function App() {
   const [login, Setlogin] = useState('');
   // eslint-disable-next-line
   const [showOverlay, SetshowOverlay] = useState(false);
+  const [openCart, SetOpenCart] = useState(false)
+
+  const handleOpenCart = () => {
+    SetOpenCart(true);
+    SetshowOverlay(true);
+  };
+
+  const closeCart = () => {
+    SetOpenCart(false);
+    SetshowOverlay(false);
+  };
+
 
   const handleLogin = () => {
     Setlogin(true);
@@ -30,8 +43,14 @@ function App() {
       ) : (
         <></>
       )}
+
+      {openCart ? (
+        <Cart closeCart={closeCart} backdrop={SetshowOverlay} />
+      ) : (
+        <></>
+      )}
       <Routes>
-        <Route path="/" element={<Layout handleLogin={handleLogin} />}>
+        <Route path="/" element={<Layout handleLogin={handleLogin} handleOpenCart={handleOpenCart}/>}>
           <Route index element={<Home />} />
           <Route path="/product/:id" element={<OneProduct />} />
           <Route path="/register" element={<Register />} />

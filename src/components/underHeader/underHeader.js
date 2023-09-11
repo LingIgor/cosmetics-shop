@@ -7,7 +7,7 @@ import { CiUser } from "react-icons/ci";
 import { StyledToolbar, Title, TitleSpan } from "./underHeader.styled";
 import { Link } from "react-router-dom";
 
-const UnderHeader = ({ handleLogin }) => {
+const UnderHeader = ({ handleLogin,handleOpenCart }) => {
   return (
     <StyledToolbar>
       <IconButton edge="start" color="inherit" aria-label="search">
@@ -24,7 +24,7 @@ const UnderHeader = ({ handleLogin }) => {
         <IconButton color="inherit" aria-label="login" onClick={handleLogin}>
           <CiUser size={33} />
         </IconButton>
-        <IconButton color="inherit" aria-label="cart">
+        <IconButton color="inherit" aria-label="cart" onClick={handleOpenCart}>
           <BsHandbag size={30} />
         </IconButton>
       </div>

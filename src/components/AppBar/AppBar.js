@@ -3,12 +3,11 @@ import Header from '../Header/Header';
 import HorizontalMenu from '../HorizontalMenu/HorizontalMenu';
 import UnderHeader from '../underHeader/underHeader';
 
-export const AppBar = ({ handleLogin }) => {
+export const AppBar = ({ handleLogin, handleOpenCart }) => {
   return (
     <div>
-      <Header />
-      <Cart />
-      <UnderHeader handleLogin={handleLogin} />
+      <Header />     
+      <UnderHeader handleLogin={handleLogin} handleOpenCart={handleOpenCart}/>
       <HorizontalMenu />
     </div>
   );
